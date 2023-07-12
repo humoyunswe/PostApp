@@ -8,11 +8,15 @@ class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(required=True)
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
-    phone = forms.CharField(required=True)
+    phone = forms.CharField(required=True,
+    widget=forms.NumberInput(attrs={'placeholder': 'Enter the telefone number: '}),)
     data_of_birth = forms.DateField(
         required=True,
-        widget=forms.DateInput(format='%d.%m.%Y'),
-        input_formats=['%d.%m.%Y'], )
+        widget=forms.DateInput(format='%d.%m.%Y',
+        attrs={'placeholder': 'DD.MM.YYYY'}
+    ),
+    input_formats=['%d.%m.%Y']
+    )
 
     class Meta:
         model = User
