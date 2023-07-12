@@ -1,0 +1,62 @@
+body {
+  background: #FCBBBB;
+  color: #333333;
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+.logo_txt {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.post_img {
+  object-fit: cover;
+}
+
+.banner__content {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(180deg, #C06578 0%, #C06578 100%);;
+        height: 150px;
+      padding-top: 8%;
+      padding-bottom: 8%;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+
+.card {
+    border-radius: 40px;
+}
+
+.banner__content h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+}
+
+.banner svg {
+      width: 100%;
+      fill: #C06578;
+}
+
+.card_obj {
+    border-radius: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);;
+  /*transition: box-shadow 0.3s ease;*/
+}
+
+.card_obj:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.banner__content:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
