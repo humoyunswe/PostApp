@@ -1,18 +1,25 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
+    <div class="content-section mt-5">
         <form method="POST">
             {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Login</button>
+            <div class="card mb-3 mx-auto card_obj" style="width: 328px; height: 632px;border-radius: 40px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);background-color: #fff;">
+                <!-- BANNER -->
+                <section class="banner">
+                    <div class="banner__content"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1280 140"><path d="M0 51.76c36.21-2.25 77.57-3.58 126.42-3.58 320 0 320 57 640 57 271.15 0 312.58-40.91 513.58-53.4V0H0z" fill-opacity=".2"/><path d="M0 24.31c43.46-5.69 94.56-9.25 158.42-9.25 320 0 320 89.24 640 89.24 256.13 0 307.28-57.16 481.58-80V0H0z" fill-opacity=".8"/><path d="M0 0v3.4C28.2 1.6 59.4.59 94.42.59c320 0 320 84.3 640 84.3 285 0 316.17-66.85 545.58-81.49V0z"/></svg>
+                </section>
+                <legend class="d-flex justify-content-center mb-4">Log In</legend>
+                <div class="p-3">
+                    {{ form|crispy }}
+                </div>
+                <div class="form-group d-flex justify-content-center mt-5">
+                    <button class="btn btn-outline-info mt-5" type="submit">Login</button>
+                </div>
             </div>
         </form>
-        <div class="border-top pt-3">
+        <div class="pt-3 d-flex justify-content-center mb-3">
             <small class="text-muted">
                 Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
             </small>

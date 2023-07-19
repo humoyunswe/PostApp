@@ -32,7 +32,13 @@ ul {
 
 .card {
     border-radius: 40px;
+    height: 632px;
 }
+
+.content-scroll {
+    max-height: 150px;
+    overflow-y: scroll;
+  }
 
 .banner__content h1 {
       text-align: center;
@@ -47,16 +53,18 @@ ul {
       fill: #C06578;
 }
 
+
 .card_obj {
     border-radius: 40px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);;
-  /*transition: box-shadow 0.3s ease;*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .card_obj:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
 }
 
 .banner__content:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
 }

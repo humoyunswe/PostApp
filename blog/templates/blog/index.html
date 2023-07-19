@@ -6,7 +6,7 @@
     <div class="container">
             <div class="d-flex justify-content-center">
             {% for post in posts %}
-                <div class="ml-4 col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="mt-5  h-100">
                         <div class="card  card_obj">
                             {% if post.file %}
@@ -22,7 +22,7 @@
                                 <img src="{{ post.file.url }}" class="rounded-circle  img-fluid" alt="" style="width: 150px; height: 150px; object-fit: cover;">
                             </div>
                             <h4><a class="text-dark d-flex justify-content-center" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h4>
-                            <p class="card-text p-2 text-center">{{ post.content }}</p>
+                            <p class="card-text p-2 text-center content-scroll">{{ post.content }}</p>
                             <div class="d-flex align-items-center p-2">
                                 <a href="{{ post.author.profile.image.url }}" target="_blank">
                                     <img src="{{ post.author.profile.image.url }}" alt="" class="rounded-circle      img-fluid mr-3" style="width: 50px; height: 50px; object-fit: cover;">
@@ -73,7 +73,7 @@
 
                     {% if page_obj.has_next %}
                         <li class="page-item">
-                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                             <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
                         </li>
                         <li class="page-item">
                             <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
